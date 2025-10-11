@@ -1,0 +1,27 @@
+{
+    "pools" : [
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    },
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    },
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    }
+    ],
+
+	"algo" : "kas_2380",
+	"bitmain-fan-ctrl" : false,
+	"bitmain-fan-pwm" : "100",
+	"bitmain-freq" : "700",
+	"bitmain-voltage" : "1660",
+	"bitmain-work-mode" : "0",
+	"bitmain-freq-level" : "100"
+}

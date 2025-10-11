@@ -1,0 +1,27 @@
+{
+    "pools" : [
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    },
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    },
+    {
+	    "url" : "",
+	    "user" : "",
+	    "pass" : ""
+    }
+    ],
+
+	"algo" : "ks5_2382",
+	"bitmain-fan-ctrl" : false,
+	"bitmain-fan-pwm" : "100",
+	"bitmain-freq" : "525",
+	"bitmain-voltage" : "1450",
+	"bitmain-work-mode" : "0",
+	"bitmain-freq-level" : "100"
+}
