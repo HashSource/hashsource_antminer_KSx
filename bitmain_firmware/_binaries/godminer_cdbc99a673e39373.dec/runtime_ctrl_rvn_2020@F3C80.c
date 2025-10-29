@@ -1,0 +1,78 @@
+void *runtime_ctrl_rvn_2020()
+{
+  void *v0; // r0
+  double v2[141]; // [sp+0h] [bp-468h] BYREF
+
+  memset(v2, 0, sizeof(v2));
+  LODWORD(v2[0]) = backend_init_base;
+  HIDWORD(v2[0]) = reset_base;
+  LODWORD(v2[1]) = change_kiss99_param_rvn;
+  HIDWORD(v2[1]) = set_dag_node_num_rvn;
+  LODWORD(v2[2]) = dhash_dag_gen_mining_start_rvn;
+  HIDWORD(v2[2]) = stop_mining_rvn;
+  LODWORD(v2[3]) = recover_mining_rvn;
+  HIDWORD(v2[3]) = backend_exit_base;
+  LODWORD(v2[4]) = push_work_base;
+  HIDWORD(v2[4]) = async_push_work_base;
+  LODWORD(v2[5]) = pop_ans_base;
+  HIDWORD(v2[5]) = try_pop_ans_base;
+  LODWORD(v2[7]) = softreset_all_chip_rvn;
+  LODWORD(v2[8]) = work_2_packet_rvn;
+  HIDWORD(v2[8]) = packet_2_nonce_rvn;
+  LODWORD(v2[9]) = check_nonce_rvn;
+  HIDWORD(v2[9]) = global_idx_init_rvn;
+  LODWORD(v2[10]) = global_idx_free_rvn;
+  HIDWORD(v2[10]) = set_baud_rvn;
+  LODWORD(v2[15]) = sub_EC7F0;
+  LODWORD(v2[16]) = get_chip_status_rvn;
+  HIDWORD(v2[16]) = get_theory_hashrate_rvn;
+  LODWORD(v2[17]) = get_sale_hashrate_rvn;
+  HIDWORD(v2[17]) = get_qualify_hashrate_rvn;
+  LODWORD(v2[18]) = get_qualify_nonce_num_rvn;
+  HIDWORD(v2[18]) = set_sensor_extern_mode_rvn;
+  LODWORD(v2[19]) = read_sensor_temp_local_rvn;
+  HIDWORD(v2[19]) = read_sensor_temp_remote_rvn;
+  LODWORD(v2[20]) = parameter_update_rvn;
+  HIDWORD(v2[20]) = overclock_update_rvn;
+  LODWORD(v2[21]) = get_pcba_test_level_rvn;
+  HIDWORD(v2[21]) = get_packet_remain_len_rvn;
+  HIDWORD(v2[23]) = set_frequency_rvn;
+  HIDWORD(v2[43]) = 500;
+  LODWORD(v2[44]) = 500;
+  v2[36] = 0.0;
+  LODWORD(v2[24]) = set_frequency_by_temp_single_base;
+  HIDWORD(v2[45]) = &sensor_rvn_bm2020;
+  HIDWORD(v2[24]) = set_frequency_single_base;
+  HIDWORD(v2[25]) = sub_EEC30;
+  HIDWORD(v2[26]) = read_temperature_rvn;
+  LODWORD(v2[27]) = top_init_rvn;
+  LODWORD(v2[28]) = dhash_start_rvn;
+  LODWORD(v2[30]) = set_chipaddr_base;
+  HIDWORD(v2[30]) = set_inactive_base;
+  LODWORD(v2[31]) = set_chip_reg_base;
+  HIDWORD(v2[31]) = set_core_reg_rvn;
+  LODWORD(v2[32]) = set_core_reg_base2;
+  HIDWORD(v2[32]) = set_core_enable_base2;
+  LODWORD(v2[33]) = sync_get_status_base2;
+  HIDWORD(v2[33]) = sync_get_chip_reg_base2;
+  LODWORD(v2[34]) = sync_get_dag_node_base;
+  HIDWORD(v2[34]) = sync_get_core_reg_base2;
+  LODWORD(v2[35]) = 5133906;
+  LODWORD(v2[37]) = 7239282;
+  *(_QWORD *)&v2[38] = 0x100002020LL;
+  *(_QWORD *)&v2[39] = 0x800000008LL;
+  HIDWORD(v2[46]) = 8;
+  *(_QWORD *)&v2[47] = 0x500000005FLL;
+  *(_QWORD *)&v2[48] = 0x3FFFFFFECLL;
+  HIDWORD(v2[58]) = 1;
+  LODWORD(v2[121]) = 1;
+  v2[117] = 8.85443866e20;
+  LODWORD(v2[120]) = &loc_F4240;
+  HIDWORD(v2[120]) = 0;
+  LODWORD(v2[51]) = 9;
+  HIDWORD(v2[100]) = 89;
+  *(_QWORD *)&v2[101] = 0x800000082LL;
+  *(_QWORD *)&v2[102] = 0x2B0000002ELL;
+  v0 = calloc(1u, 0x468u);
+  return memcpy(v0, v2, 0x468u);
+}

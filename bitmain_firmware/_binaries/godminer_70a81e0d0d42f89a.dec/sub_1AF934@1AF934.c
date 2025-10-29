@@ -1,0 +1,5 @@
+_DWORD *__fastcall sub_1AF934(_DWORD *result)
+{
+  ++*result;
+  return result;
+}

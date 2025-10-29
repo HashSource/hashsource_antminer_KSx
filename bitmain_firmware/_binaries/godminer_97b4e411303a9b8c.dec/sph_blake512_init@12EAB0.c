@@ -1,0 +1,4 @@
+int __fastcall sph_blake512_init(int a1)
+{
+  return sub_12E8BC(a1, dword_29B9A8);
+}

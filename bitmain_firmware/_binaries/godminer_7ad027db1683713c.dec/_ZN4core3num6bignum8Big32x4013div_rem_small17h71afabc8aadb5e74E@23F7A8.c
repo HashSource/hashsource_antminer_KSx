@@ -1,0 +1,30 @@
+int __fastcall core::num::bignum::Big32x40::div_rem_small(int a1, unsigned int a2)
+{
+  unsigned int v3; // r0
+  unsigned int v5; // r1
+  int v6; // r7
+  int v7; // r4
+  unsigned int v8; // r6
+  unsigned int v9; // r0
+
+  if ( !a2 )
+    core::panicking::panic((int)aAssertionFaile_51, 27, (int)&off_2CF600);
+  v3 = *(_DWORD *)(a1 + 160);
+  if ( v3 >= 0x29 )
+    core::slice::index::slice_end_index_len_fail(v3, 40, (int)&off_2CF600);
+  if ( !v3 )
+    return a1;
+  v5 = 0;
+  v6 = -4 * v3;
+  v7 = a1 - 4;
+  do
+  {
+    v8 = *(_DWORD *)(v7 - v6);
+    v9 = sub_25A4F8(v8, v5, a2);
+    *(_DWORD *)(v7 - v6) = v9;
+    v5 = v8 - v9 * a2;
+    v6 += 4;
+  }
+  while ( v6 );
+  return a1;
+}

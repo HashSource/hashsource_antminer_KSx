@@ -1,0 +1,78 @@
+void *runtime_ctrl_kas_2380()
+{
+  void *v0; // r0
+  double v2[145]; // [sp+0h] [bp-488h] BYREF
+
+  memset(v2, 0, sizeof(v2));
+  LODWORD(v2[0]) = backend_init_base;
+  HIDWORD(v2[0]) = reset_base;
+  LODWORD(v2[2]) = dhash_mining_start_base;
+  HIDWORD(v2[2]) = dhash_mining_stop_base;
+  LODWORD(v2[3]) = dhash_mining_reset_base;
+  HIDWORD(v2[3]) = backend_exit_base;
+  LODWORD(v2[4]) = push_work_base;
+  HIDWORD(v2[4]) = async_push_work_base;
+  LODWORD(v2[5]) = pop_ans_base;
+  HIDWORD(v2[5]) = try_pop_ans_base;
+  LODWORD(v2[7]) = softreset_all_chip_one_by_one_kas;
+  LODWORD(v2[8]) = work_2_packet_kas;
+  HIDWORD(v2[8]) = packet_2_nonce_kas;
+  LODWORD(v2[9]) = check_nonce_kas;
+  HIDWORD(v2[9]) = global_idx_init_kas;
+  LODWORD(v2[10]) = global_idx_free_kas;
+  HIDWORD(v2[10]) = set_baud_kas;
+  LODWORD(v2[15]) = sub_E9D18;
+  LODWORD(v2[16]) = get_chip_status_kas;
+  HIDWORD(v2[16]) = get_theory_hashrate_kas;
+  LODWORD(v2[17]) = get_sale_hashrate_kas;
+  HIDWORD(v2[17]) = get_qualify_hashrate_kas;
+  LODWORD(v2[18]) = get_qualify_nonce_num_kas;
+  HIDWORD(v2[18]) = set_sensor_extern_mode_kas;
+  LODWORD(v2[19]) = read_sensor_temp_local_kas;
+  HIDWORD(v2[19]) = read_sensor_temp_remote_kas;
+  LODWORD(v2[20]) = parameter_update_kas;
+  HIDWORD(v2[20]) = overclock_update_kas;
+  LODWORD(v2[21]) = get_pcba_test_level_kas;
+  HIDWORD(v2[21]) = get_packet_remain_len_kas;
+  HIDWORD(v2[23]) = set_frequency_kas;
+  LODWORD(v2[24]) = set_frequency_by_temp_single_kas;
+  HIDWORD(v2[24]) = set_frequency_single_kas;
+  v2[39] = 0.0;
+  HIDWORD(v2[46]) = 500;
+  LODWORD(v2[47]) = 500;
+  HIDWORD(v2[25]) = sub_EBC88;
+  HIDWORD(v2[26]) = read_temperature_kas;
+  LODWORD(v2[27]) = top_init_kas;
+  LODWORD(v2[28]) = dhash_start_kas;
+  LODWORD(v2[32]) = set_chipaddr_base;
+  HIDWORD(v2[32]) = set_inactive_base;
+  LODWORD(v2[33]) = set_chip_reg_base;
+  HIDWORD(v2[33]) = set_core_reg_base_9;
+  LODWORD(v2[34]) = set_core_reg_base_9;
+  HIDWORD(v2[34]) = set_core_enable_base;
+  LODWORD(v2[35]) = sync_get_status_base2;
+  HIDWORD(v2[35]) = sync_get_chip_reg_base3;
+  HIDWORD(v2[37]) = sync_get_core_reg_base3;
+  LODWORD(v2[38]) = 3363659;
+  LODWORD(v2[40]) = 7561579;
+  HIDWORD(v2[48]) = &sensor_kas_2380;
+  *(_QWORD *)&v2[41] = 0x100002380LL;
+  *(_QWORD *)&v2[42] = 0x2D0000005CLL;
+  *(_QWORD *)&v2[50] = 0x500000005CLL;
+  HIDWORD(v2[44]) = 2;
+  HIDWORD(v2[49]) = 2;
+  *(_QWORD *)&v2[51] = 0x1FFFFFFECLL;
+  LODWORD(v2[54]) = 36;
+  HIDWORD(v2[61]) = 1;
+  HIDWORD(v2[65]) = 1;
+  LODWORD(v2[125]) = 1;
+  HIDWORD(v2[121]) = 1112014848;
+  *(_QWORD *)&v2[122] = 0x58C43C80000LL;
+  *(_QWORD *)&v2[124] = 142606;
+  HIDWORD(v2[103]) = 200;
+  *(_QWORD *)&v2[104] = 0x800000022LL;
+  *(_QWORD *)&v2[105] = 0xE00000036LL;
+  BYTE4(v2[123]) = 15;
+  v0 = calloc(1u, 0x488u);
+  return memcpy(v0, v2, 0x488u);
+}

@@ -1,0 +1,43 @@
+void *machine_runtime_ctrl_ks5_2382()
+{
+  void *v0; // r0
+  void *v1; // r4
+  _DWORD src[31]; // [sp+4h] [bp-7Ch] BYREF
+
+  memset(&src[4], 0, 0x64u);
+  v0 = calloc(1u, 0x7Cu);
+  v1 = v0;
+  if ( v0 )
+  {
+    src[27] = 1144422400;
+    src[29] = 1065353216;
+    src[0] = sub_A9498;
+    src[26] = "s$u20$core..fmt..Debug$GT$3fmt17h5868a220a5159e3dE";
+    src[1] = sub_A9588;
+    src[2] = get_working_voltage_ks5;
+    src[3] = start_voltage_monitor_base;
+    src[6] = sub_AA9AC;
+    src[7] = set_voltage_base;
+    src[8] = start_freq_compensate_thread_base;
+    src[9] = calc_freq_compensate_by_temp_base;
+    src[10] = set_baud_base;
+    src[11] = set_frequency_with_voltage_ks5;
+    src[12] = start_mining_ks5;
+    src[13] = rename_miner_by_eeprom_info_ks5;
+    src[14] = stop_mining_base;
+    src[15] = reset_mining_base;
+    src[16] = check_asic_num_base;
+    src[17] = check_bringup_temperature_base;
+    src[21] = &stru_1C200;
+    src[22] = &stru_1C200;
+    src[30] = "/config/sn";
+    src[20] = 35;
+    src[25] = 1500;
+    memcpy(v0, src, 0x7Cu);
+  }
+  else
+  {
+    printf("invalid pointer(%s)!\n", "new_machine_runtime");
+  }
+  return v1;
+}

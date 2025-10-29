@@ -1,0 +1,23 @@
+int *__fastcall sha256(char *a1, size_t n, _BYTE *a3)
+{
+  _DWORD *v3; // r3
+  char *v4; // r12
+  int v6; // t1
+  _DWORD v8[34]; // [sp+0h] [bp-ACh] BYREF
+  char v9; // [sp+88h] [bp-24h] BYREF
+
+  v3 = &unk_2E7D28;
+  v4 = &v9;
+  do
+  {
+    v6 = v3[1];
+    ++v3;
+    *(_DWORD *)v4 = v6;
+    v4 += 4;
+  }
+  while ( v3 != (_DWORD *)&unk_2E7D48 );
+  v8[0] = 0;
+  v8[1] = 0;
+  sha256_update((unsigned __int8 *)v8, a1, n);
+  return sha256_final(v8, a3);
+}

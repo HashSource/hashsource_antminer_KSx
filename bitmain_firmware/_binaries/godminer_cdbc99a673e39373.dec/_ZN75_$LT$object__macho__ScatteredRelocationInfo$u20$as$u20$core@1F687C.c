@@ -1,0 +1,38 @@
+int __fastcall <object::macho::ScatteredRelocationInfo as core::fmt::Debug>::fmt(int a1, int a2)
+{
+  int v3; // [sp+50h] [bp-14h] BYREF
+  int v4; // [sp+54h] [bp-10h] BYREF
+  int v5; // [sp+58h] [bp-Ch] BYREF
+  int v6; // [sp+5Ch] [bp-8h] BYREF
+  int v7; // [sp+60h] [bp-4h] BYREF
+
+  v4 = a1 + 8;
+  v5 = a1 + 9;
+  v3 = a1;
+  v7 = a1 + 4;
+  v6 = a1 + 10;
+  return core::fmt::Formatter::debug_struct_field5_finish(
+           a2,
+           &unk_294BEA,
+           23,
+           &unk_294BBB,
+           9,
+           &v3,
+           &off_2CC308,
+           &unk_294BD6,
+           6,
+           &v4,
+           &off_2CC0D0,
+           &unk_294112,
+           8,
+           &v5,
+           &off_2CC0D0,
+           &unk_294BCF,
+           7,
+           &v6,
+           &off_2CC328,
+           &unk_294C01,
+           7,
+           &v7,
+           &off_2CC308);
+}

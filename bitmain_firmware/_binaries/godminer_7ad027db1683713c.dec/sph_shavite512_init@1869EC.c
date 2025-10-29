@@ -1,0 +1,32 @@
+int __fastcall sph_shavite512_init(_DWORD *a1)
+{
+  _DWORD *v1; // lr
+  int *v2; // r4
+  int result; // r0
+  int v5; // r1
+  int v6; // r2
+  int v7; // r3
+
+  v1 = a1 + 33;
+  v2 = (int *)&unk_28E5F8;
+  do
+  {
+    v1 += 4;
+    result = *v2;
+    v5 = v2[1];
+    v6 = v2[2];
+    v7 = v2[3];
+    v2 += 4;
+    *(v1 - 4) = result;
+    *(v1 - 3) = v5;
+    *(v1 - 2) = v6;
+    *(v1 - 1) = v7;
+  }
+  while ( v2 != (int *)&unk_28E638 );
+  a1[32] = 0;
+  a1[49] = 0;
+  a1[50] = 0;
+  a1[51] = 0;
+  a1[52] = 0;
+  return result;
+}

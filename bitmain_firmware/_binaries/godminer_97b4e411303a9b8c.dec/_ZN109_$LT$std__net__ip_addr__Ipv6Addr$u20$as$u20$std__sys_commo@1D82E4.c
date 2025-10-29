@@ -1,0 +1,17 @@
+_DWORD *__fastcall <std::net::ip_addr::Ipv6Addr as std::sys_common::IntoInner<libc::unix::align::in6_addr>>::into_inner(
+        _DWORD *result,
+        int *a2)
+{
+  int v2; // r12
+  int v3; // r3
+  int v4; // r2
+
+  v2 = *a2;
+  v3 = a2[1];
+  v4 = a2[2];
+  result[3] = a2[3];
+  result[2] = v4;
+  result[1] = v3;
+  *result = v2;
+  return result;
+}

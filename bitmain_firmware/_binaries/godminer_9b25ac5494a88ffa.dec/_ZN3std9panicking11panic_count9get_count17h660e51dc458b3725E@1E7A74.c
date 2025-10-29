@@ -1,0 +1,4 @@
+int std::panicking::panic_count::get_count()
+{
+  return *(_DWORD *)_tls_get_addr(&dword_2E4454);
+}

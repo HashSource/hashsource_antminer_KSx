@@ -1,0 +1,4 @@
+char **__fastcall std::net::udp::UdpSocket::peek_from(int a1, int *a2, int a3, int a4)
+{
+  return (char **)sub_1F250C(a1, *a2, a3, a4, 2);
+}

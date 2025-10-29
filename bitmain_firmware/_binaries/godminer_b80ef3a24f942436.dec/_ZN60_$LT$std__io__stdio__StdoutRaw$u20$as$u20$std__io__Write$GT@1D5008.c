@@ -1,0 +1,60 @@
+unsigned int __fastcall <std::io::stdio::StdoutRaw as std::io::Write>::write_all(
+        unsigned int result,
+        int a2,
+        char *buf,
+        unsigned int a4)
+{
+  int v4; // r7
+  int *v5; // r4
+  int v6; // r8
+  unsigned int v7; // r5
+  size_t v9; // r2
+
+  v5 = (int *)result;
+  v6 = 4;
+  if ( !a4 )
+    goto LABEL_11;
+  v7 = a4;
+  do
+  {
+    while ( 1 )
+    {
+      v9 = v7;
+      if ( v7 >= 0x7FFFFFFF )
+        v9 = 0x7FFFFFFF;
+      result = write(1, buf, v9);
+      if ( result == -1 )
+        break;
+      if ( !result )
+      {
+        v6 = 2;
+LABEL_13:
+        *v5 = v6;
+        v5[1] = (int)&off_2E9C28;
+        return result;
+      }
+      if ( v7 < result )
+        core::slice::index::slice_start_index_len_fail();
+      v7 -= result;
+      buf += result;
+      if ( !v7 )
+        goto LABEL_13;
+    }
+    v4 = *_errno_location();
+    result = (unsigned __int8)std::sys::unix::decode_error_kind(v4);
+  }
+  while ( (unsigned __int8)result == 35 );
+  v6 = 0;
+  if ( v4 == 9 )
+  {
+    *(_BYTE *)v5 = 4;
+    return 4;
+  }
+  else
+  {
+LABEL_11:
+    *v5 = v6;
+    v5[1] = v4;
+  }
+  return result;
+}

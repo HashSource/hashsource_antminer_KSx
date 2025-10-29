@@ -1,0 +1,25 @@
+// Alternative name is '_ZN76_$LT$libc..unix..linux_like..linux..mntent$u20$as$u20$core..clone..Clone$GT$5clone17hefb23ccfb6cdd4c9E'
+// Alternative name is '_ZN83_$LT$libc..unix..linux_like..linux..input_absinfo$u20$as$u20$core..clone..Clone$GT$5clone17hb5f86070cdb1c2caE'
+_DWORD *__fastcall <libc::unix::linux_like::linux::gnu::nl_mmap_hdr as core::clone::Clone>::clone(
+        _DWORD *result,
+        _DWORD *a2)
+{
+  int v2; // r3
+  int v3; // r4
+  int v4; // r5
+  int v5; // r12
+  int v6; // lr
+
+  v2 = a2[1];
+  v3 = a2[2];
+  v4 = a2[3];
+  v5 = a2[4];
+  v6 = a2[5];
+  *result = *a2;
+  result[1] = v2;
+  result[2] = v3;
+  result[3] = v4;
+  result[4] = v5;
+  result[5] = v6;
+  return result;
+}

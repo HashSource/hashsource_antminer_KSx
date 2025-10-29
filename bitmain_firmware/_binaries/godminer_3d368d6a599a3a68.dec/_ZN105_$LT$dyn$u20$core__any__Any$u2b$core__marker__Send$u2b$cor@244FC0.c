@@ -1,0 +1,16 @@
+// Alternative name is '_ZN59_$LT$dyn$u20$core..any..Any$u20$as$u20$core..fmt..Debug$GT$3fmt17h5525573b34c29f17E'
+int __fastcall <dyn core::any::Any+core::marker::Send+core::marker::Sync as core::fmt::Debug>::fmt(
+        int a1,
+        int a2,
+        int *a3)
+{
+  int v3; // r4
+  int (__fastcall *v4)(int, const char *, int); // r5
+
+  v3 = *a3;
+  v4 = *(int (__fastcall **)(int, const char *, int))(a3[1] + 12);
+  if ( v4(*a3, aAny, 3) )
+    return 1;
+  else
+    return v4(v3, asc_2B4883, 7);
+}

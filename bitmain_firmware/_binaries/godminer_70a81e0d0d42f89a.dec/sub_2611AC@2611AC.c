@@ -1,0 +1,4 @@
+int __fastcall sub_2611AC(_DWORD **a1)
+{
+  return (*(int (__fastcall **)(_DWORD))((*a1)[1] + 12))(**a1);
+}

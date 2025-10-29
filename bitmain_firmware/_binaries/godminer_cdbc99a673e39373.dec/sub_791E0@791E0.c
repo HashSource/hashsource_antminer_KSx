@@ -1,0 +1,46 @@
+void __fastcall sub_791E0(_DWORD *a1, int a2, int a3, __mode_t a4)
+{
+  void *v6; // r0
+  bool v7; // zf
+  char *v8; // r5
+  int v9; // r8
+  int v10; // r6
+  char *v11; // [sp+0h] [bp-10h] BYREF
+  int v12; // [sp+4h] [bp-Ch]
+  void *ptr; // [sp+8h] [bp-8h]
+
+  <&str as alloc::ffi::c_str::CString::new::SpecNewImpl>::spec_new_impl(&v11);
+  v6 = ptr;
+  if ( ptr )
+  {
+    v7 = v12 == 0;
+    *a1 = dword_2CB158;
+    a1[1] = &off_2CB14C;
+    if ( !v7 )
+      _rust_dealloc(v6);
+  }
+  else
+  {
+    v8 = v11;
+    v9 = v12;
+    while ( chmod(v8, a4) == -1 )
+    {
+      v10 = *_errno_location();
+      if ( (unsigned __int8)std::sys::unix::decode_error_kind(v10) != 35 )
+      {
+        *a1 = 0;
+        a1[1] = v10;
+        *v8 = 0;
+        if ( !v9 )
+          return;
+        goto LABEL_10;
+      }
+    }
+    *(_BYTE *)a1 = 4;
+    *v8 = 0;
+    if ( !v9 )
+      return;
+LABEL_10:
+    _rust_dealloc(v8);
+  }
+}

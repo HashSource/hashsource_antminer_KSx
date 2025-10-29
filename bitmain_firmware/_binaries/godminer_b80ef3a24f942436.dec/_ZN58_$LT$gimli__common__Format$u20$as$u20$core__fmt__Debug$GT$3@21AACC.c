@@ -1,0 +1,9 @@
+int __fastcall <gimli::common::Format as core::fmt::Debug>::fmt(_BYTE *a1, _DWORD *a2)
+{
+  char *v3; // r1
+
+  v3 = aDwarf64;
+  if ( *a1 != 8 )
+    v3 = &aUnknownSection[3759];
+  return <core::fmt::Formatter as core::fmt::Write>::write_str(a2, v3, 7);
+}
